@@ -31,8 +31,8 @@ async function postDB(forDB){
 
        const content = await response.json();
        console.log(content);
-     
-     
+        // ვანახლებ მონაცემთა ბაზაში თუდუების პოზიციებს.
+       positonPut()
     } catch (error){
        console.error('Error in postDB:', error);
     }
