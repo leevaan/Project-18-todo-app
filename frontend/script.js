@@ -180,8 +180,7 @@ textTodo.addEventListener("keydown", (event) => {
             }
             // ვაგზავნი ინფორმაციას სერვერზე მონაცემთა ბაზაში ჩასაწერად
             postDB(forDB);
-            // ვანახლებ მონაცემთა ბაზაში თუდუების პოზიციებს.
-            positonPut()
+           
             attachDragStartEnd();
             // დათვალე მხოლოდ აქტიური ჩეკბოქსი
             itemsLeftCount();
