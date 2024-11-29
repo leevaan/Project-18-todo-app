@@ -1,0 +1,26 @@
+.env
+# 
+node_modules/
+# 
+*.log
+npm-debug.log*
+# Operating system-specific files (MacOS, Windows)
+# .DS_Store
+Thumbs.db
+# Temporary files or build artifacts
+tmp/
+dist/
+build/
+# IDE/Editor files (გააჩნია რით მუშაობ)
+.vscode/
+# Test coverage outputs
+coverage/
+# Package lock files (გააჩნია პროექტის საჭიროებას)
+package-lock.json
+# yarn.lock
+# Deployment files
+*.gz
+*.zip
+# Miscellaneous
+*.bak
+*.swp

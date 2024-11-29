@@ -1,0 +1,352 @@
+html{
+    /* 70px - 48px_540vw - 327vw- */
+    padding:  clamp(3rem, 0.8891rem + 10.3286vw, 4.375rem) 24px 52px 24px;
+    min-height: 100vh;
+}
+body{
+    /* background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;  
+     */
+    margin: 0 auto;
+    max-width: 540px;
+    width: 100%;
+    transition: all 0.4s;
+}
+.banner-dark, .banner-light{
+    width: 100%;
+    height: 30vh;
+
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.banner-light{
+    z-index: -3;
+
+}
+.banner-dark{
+    opacity: 0;
+    z-index: -2;
+    transition: opacity 0.4s;
+}
+/* ================ HEADER end ================ */
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /* 48px - 40px_540vw - 327vw- */
+    margin-bottom: clamp(2.5rem, 1.7324rem + 3.7559vw, 3rem);
+}
+.btn-theme{
+    /* 26px - 20px_540vw - 327vw- */
+    width: clamp(1.25rem, 0.6743rem + 2.8169vw, 1.625rem);
+    height: clamp(1.25rem, 0.6743rem + 2.8169vw, 1.625rem);
+    cursor: pointer;
+}
+.logo{
+    color: #FFF;
+    font-family: "Josefin Sans";
+    /* 40px - 30px_540vw - 327vw- */
+    font-size: clamp(1.875rem, 0.9155rem + 4.6948vw, 2.5rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    /* 15px - 10px_540vw - 327vw- */
+    letter-spacing: clamp(0.625rem, 0.1452rem + 2.3474vw, 0.9375rem);
+}
+/* ================ SECTION ONE START ================ */
+
+/* ================ MAIN end ================ */
+main{
+    /* 49px - 40px_540vw - 327vw- */
+    margin-bottom: clamp(3.0625rem, 3.9261rem + -4.2254vw, 2.5rem);
+}
+.app-header{
+    /* 24px - 16\px_540vw - 327vw- */
+    margin-bottom: clamp(1rem, 0.2324rem + 3.7559vw, 1.5rem);
+}
+main .test{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+}
+.form-round-icon{
+    display: block;
+    /* 24px - 20px_540vw - 327vw- */
+    width: clamp(1.25rem, 0.8662rem + 1.8779vw, 1.5rem);
+    height: clamp(1.25rem, 0.8662rem + 1.8779vw, 1.5rem);
+    
+    /* 24px - 20px_540vw - 327vw- */
+    margin-left: clamp(1.25rem, 0.8662rem + 1.8779vw, 1.5rem);
+    /* 24px - 12px_540vw - 327vw- */
+    margin-right: clamp(0.75rem, -0.4014rem + 5.6338vw, 1.5rem);
+
+    border-radius: 50%;
+}
+#text-todo{
+    border: none;
+    border-radius: 5px;
+    max-width: 462px;
+    width: 100%;
+     /* 64px - 48px_540vw - 327vw- */
+    height: clamp(3rem, 1.4648rem + 7.5117vw, 4rem);
+    caret-color: #3A7CFD;
+
+}
+#text-todo::placeholder{
+    color: #9495A5;
+}
+.ul-todo-list{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /* overflow: hidden; */
+}
+.last-ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 24px - 20px_540vw - 327vw- */
+    padding-left: clamp(1.25rem, 0.8662rem + 1.8779vw, 1.5rem);
+    /* 24px - 20px_540vw - 327vw- */
+    padding-right: clamp(1.25rem, 0.8662rem + 1.8779vw, 1.5rem);
+
+    min-height: 50px;
+    font-size: 14px;
+    font-weight: 700; 
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.last-ul-mobile{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+      /* 24px - 20px_540vw - 327vw- */
+    padding-left: clamp(1.25rem, 0.8662rem + 1.8779vw, 1.5rem);
+    /* 24px - 20px_540vw - 327vw- */
+    padding-right: clamp(1.25rem, 0.8662rem + 1.8779vw, 1.5rem);
+
+    min-height: 50px;
+    font-size: 14px;
+    font-weight: 700; 
+
+    margin-bottom: 16px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.last-uls-li{
+    max-width: 166px;
+    width: 100%;
+}
+.last-uls-ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.active-all{
+    color: #3A7CFD; 
+}
+.last-uls-ul > li:hover, .last-ul > div:not(.only-read):hover{
+    cursor: pointer;
+}
+
+
+.todo-list-li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 24px - 20px_540vw - 327vw- */
+    padding-left: clamp(1.25rem, 0.8662rem + 1.8779vw, 1.5rem);
+    /* 24px - 20px_540vw - 327vw- */
+    padding-right: clamp(1.25rem, 0.8662rem + 1.8779vw, 1.5rem);
+
+    min-height: 63px;
+}
+
+/*------------------------- chaxk box style ------------------- */
+/* რადგან ეკრანის წამკითხველება შეჩლონ წაკითხვა ამიტომ არ ვიყენებთ diplay: none; */
+.inp-cbx{
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox-cont .cbx-lbl {
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+.checkbox-cont .cbx-lbl span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+    max-width: 425px;
+    /* overflow-wrap: break-word; */
+    word-break: break-word;
+}
+/*-    ------ Wrap the line over the text START -------*/
+
+.checkbox-cont .inp-cbx:checked + .cbx-lbl .todo-txt {
+    color: #4D5067;
+    transition: all 0.3s ease;
+    text-decoration: line-through;
+}
+
+/*----- Wrap the line over the text  END ------*/
+.todo-txt{
+    /* 48px - 32px_540vw - 327vw- */
+    margin-left: clamp(2rem, 0.4648rem + 7.5117vw, 3rem);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+/* Gradient border style START */
+.gradinet-cont{
+    position: absolute;
+    /* left: 0; */
+    z-index: 0;
+    width: 26px;
+    height: 26px;
+    /* background: linear-gradient(to bottom right, #55DDFF ,#C058F3); */
+    border-radius: 50%;
+    /* 24px - 12px_540vw - 327vw- */
+    margin-right: clamp(0.75rem, -0.4014rem + 5.6338vw, 1.5rem);
+}
+.gray-bck{
+    position: absolute;
+    z-index: 1;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    vertical-align: middle;
+    background: linear-gradient(to bottom right, #55DDFF ,#C058F3);
+    margin-right: clamp(0.75rem, -0.4014rem + 5.6338vw, 1.5rem);
+    transition: 0.8s;
+    opacity: 0;
+}
+
+.checkbox-cont .cbx-lbl .checkd {
+    position: absolute;
+    z-index: 2;
+    /* top: 49%;
+    left: 50%;
+    transform: translate(-50%, -49%); */
+
+    top: 51px;
+    left: 51px;
+    transform: translate(-50px, -50px);
+    
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.checkbox-cont .cbx-lbl:hover >.gradinet-cont > .gray-bck{
+    opacity: 1;
+}
+/* Gradient border style END */
+
+.checkbox-cont .cbx-lbl .checkd svg {
+    position: absolute;
+    top: 30%;
+    left: 29%;
+    transform: translate(-29%, -30%);
+    z-index: 1;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+    
+}
+    
+.checkbox-cont .inp-cbx:checked + .cbx-lbl .checkd {
+    background: linear-gradient(to bottom right, #55DDFF ,#C058F3);
+}
+.checkbox-cont .inp-cbx:checked + .cbx-lbl .checkd svg {
+    stroke-dashoffset: 0;
+}
+.checkbox-cont .inp-cbx:checked + .cbx-lbl .checkd:before {
+    transform: scale(2.2);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.remove-todo-icone {
+    opacity: 0; /* Start fully transparent */
+    cursor: pointer;
+    transition: opacity 0.4s; /* Animate opacity and visibility */
+}
+
+.todo-list-li:hover > .remove-todo-icone {
+    opacity: 1; /* Fade in */
+}
+.dragging, .dragging .todo-txt{
+    opacity: 0.3;
+}
+.Clear-Completed{
+    cursor: pointer;
+}
+.empty-todo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.empty-todo > img{
+    /* margin: 0 auto; */
+    max-width: 90%;
+    max-height: 90%;
+   
+}
+.empty-todo > span{
+    /* 24px - 16\px_540vw - 327vw- */
+    font-size: clamp(1rem, 0.2324rem + 3.7559vw, 1.5rem);
+    font-weight: 400;
+    transition: color .5s cubic-bezier(.37,0,.63,1);
+
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+/* ================ MAIN end ================ */
+
+@media only screen and (max-width: 480px) {
+    .last-ul > li:not(.last-uls-li){
+        display: none;
+    }
+    .last-uls-li{
+        margin: 0 auto;
+    }
+    .last-ul-mobile{
+        display: flex;
+    }
+    .gradinet-cont,.gray-bck{
+        width: 22px;
+        height: 22px;
+    }
+    .checkbox-cont .cbx-lbl .checkd {
+        width: 20px;
+        height: 20px;
+    }
+    .checkbox-cont .cbx-lbl .checkd svg{
+        width: 10px;
+        height: 7px;
+    }
+    .ul-todo-list, .last-ul{
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="Levani Jikia" content="Levani Jikia">
+    <!-- <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Free Web tutorials">
+    <meta http-equiv="refresh" content="30"> -->
+    <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+    <meta property="og:description" content="How much does culture influence creative thinking?" />
+    <meta property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link id="link-light-theme" class="light-mode" rel="stylesheet" href="light-theme.css">
+    <!-- Because there might be a brief flicker when switching style sheets while the browser loads the new CSS file. -->
+    <link id="link-dark-theme" class="dark-mode" rel="stylesheet" href="dark-theme.css" disabled>
+    <link rel="icon" type="png"  href="./images/favicon-32x32.png">
+    <title>TodoApp</title>
+    <style>
+        .attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+</head>
+<body>
+  <img class="banner-dark" src="./images/bg-desktop-dark.jpg" alt="banner">
+  <img class="banner-light" src="./images/bg-desktop-light.jpg" alt="banner">
+    <header>
+        <span class="logo">TODO</span>
+        <img class="btn-theme"  src="images/icon-moon.svg" aria-label="button of mode" alt="dark an light mode" width="26px" height="26px">
+        <!-- <img class="btn-theme" id="sun" src="images/icon-sun.svg" aria-label="button of mode" alt="dark an light mode" width="26px" height="26px"> -->
+    </header>
+
+    <main>
+        <div class="app-header">
+            <div class="test">
+                <div>
+                    <span class="form-round-icon"></span>
+                </div>
+                <input type="text" id="text-todo" name="username" placeholder="Create a new todo…">
+            </div>
+        </div>
+        
+        <div class="app-body">
+          <div class="empty-todo" style="display: none;">
+            <img  src="./images/empty-state.png" alt="empty todo">
+            <span>No to dos yet</span>
+          </div>
+            <ul class="ul-todo-list">
+
+                <!-- აქ ჩაიყრება თუდუ ელემენტები -->
+                 
+            </ul>
+            <div class="last-ul-mobile">
+                <div class="only-read"><span class="items-left"></span> items left</div>
+                <div class="Clear-Completed">Clear Completed</div>
+            </div>
+
+            <ul class="last-ul">
+                <li class="only-read"><span class="items-left"></span> items left</li>
+                <li class="last-uls-li">
+                    <ul class="last-uls-ul">
+                        <li class="active-all" style="pointer-events: none;">All</li> 
+                        <li class="active">Active</li>
+                        <li class="completed">completed</li>
+                    </ul>
+                </li>
+                <li class="Clear-Completed">Clear Completed</li>
+            </ul>  
+        </div>
+    </main>
+    
+    <footer class="attribution">
+        <div>
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Levani Jikia</a>.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="client.js"></script>
+    <script src="tamplate.js"></script>
+    <script>
+        
+      (async function main(){
+        try{
+            const todo = await getTodo();
+            if (!Array.isArray(todo)) {
+                throw new Error("Invalid data format: Expected an array");
+            }
+            // Create the HTML for all todos
+            todo.forEach((element) => {
+                const newLi = document.createElement("li");
+                newLi.classList.add("todo-list-li");
+                newLi.setAttribute("draggable", "true");
+                newLi.innerHTML = tamplateTodo(element.todo_id, element.users_todo, element.active_completed);
+                document.querySelector(".ul-todo-list").appendChild(newLi);
+            });
+            attachDragStartEnd();
+            checkEmptyChildren();
+            } catch (error){
+              console.error("Error in main():", error);
+            }
+            //ვაცდი მონაცემებს ჩატვირთვას და შემდეგ ვამოწმებ ლოკალსთორიჯს რადგან შევჩლო დომზე საჭირო მანიპულაცია.
+            const bottomButtons = localStorage.getItem('bottomButtons');
+            if(bottomButtons === "active"){
+                activeBTN();
+             } else if (bottomButtons === "completed"){
+                completedBTN();
+             } else if (bottomButtons === "active-all"){
+                activeAllBTN();
+            }
+            itemsLeftCount(); 
+       })();
+       
+    </script>
+</body>
+</html>
+  
+  

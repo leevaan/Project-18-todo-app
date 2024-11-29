@@ -1,0 +1,70 @@
+body{
+    background-color:  #FAFAFA;
+    /* background-image: url(images/bg-desktop-light.jpg); */
+    color: #494C6B;
+}
+.form-round-icon{
+    border: 1px solid #E3E4F1;
+}
+main .test{
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+}
+main .test, #text-todo{
+    background: #FFF;
+    border-radius: 5px;
+}
+#text-todo::placeholder{
+    color: #9495A5;
+}
+#text-todo{
+    color: #393A4B;
+}
+/*  You cannot override the ":internal-autofill-selected" pseudo-element styling.
+However, there's a workaround - change the box-shadow colour accordingly:
+ */
+input:-webkit-autofill{
+    -webkit-text-fill-color: #393A4B;
+    /* -webkit-box-shadow: 0 0 0 3rem white inset !important;  */
+    transition: background-color 5000s ease-in-out 0s; /* Prevents default yellow background */
+}
+
+
+/* -------------- SECTION TWO ----------------*/
+.app-body {
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+}
+.ul-todo-list, .last-ul{
+    background: #FFF;
+}
+.last-ul-mobile {
+    background: #FFF;
+    color: #9495A5;
+}
+.last-ul{
+    color: #9495A5;
+}
+.last-uls-ul > li:hover, .Clear-Completed:hover{
+    color: #494C6B;
+    transition: 0.8s;
+}
+.checkbox-cont .cbx-lbl .checkd {
+    background-color: #fff;
+}
+.gradinet-cont{
+    background-color: #E3E4F1;
+}
+.todo-list-li{
+    border-bottom: 1px solid #E3E4F1;
+}
+.checkbox-cont .inp-cbx:checked + .cbx-lbl .todo-txt {
+    color: #D1D2DA;
+}
+.checkbox-cont .cbx-lbl .todo-txt:before{
+    background: #D1D2DA;
+}
+.empty-todo{
+    background-color:#FFF;
+}
+.empty-todo > span{
+    color: #484b6a;
+}
